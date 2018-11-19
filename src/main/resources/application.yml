@@ -7,6 +7,6 @@ spring:
       config:
          server:
             git: # 配置git
-               uri: https://github.com/garyhu1/spring-cloud-config-repo.git
+               uri: https://github.com/garyhu1/spring-cloud-config-repo
                username: garyhu1
                password: lyyahww09081020
