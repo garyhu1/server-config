@@ -1,5 +1,5 @@
 server:
-   port: 8801
+   port: 8802
 encrypt:
    key: foo    # 对称加密
    keyStore:  # 非对称加密
@@ -20,7 +20,7 @@ spring:
                # 采用占位符来配置git URI
                #uri: https://github.com/garyhu1/{application}
                username: garyhu1
-               password: lyyahww09081020
+               password: 
             health:
                repositorues:
                   check:
