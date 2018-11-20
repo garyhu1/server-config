@@ -20,7 +20,7 @@ spring:
                # 采用占位符来配置git URI
                #uri: https://github.com/garyhu1/{application}
                username: garyhu1
-               password: 
+               password:
             health:
                repositorues:
                   check:
