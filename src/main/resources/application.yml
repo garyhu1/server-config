@@ -1,14 +1,33 @@
 server:
    port: 8801
+encrypt:
+   key: foo    # 对称加密
+   keyStore:  # 非对称加密
+      location: classpath:/nj.jks
+      password: nanjing
+      alias: nj
+      secret: nanjing
 spring:
    application:
       name: server-config
    cloud:
       config:
          server:
+            encrypt:
+               enabled: false   # true返回密文本身；false返回密文
             git: # 配置git
                uri: https://github.com/garyhu1/spring-cloud-config-repo
                # 采用占位符来配置git URI
                #uri: https://github.com/garyhu1/{application}
-               username:
-               password: 
+               username: garyhu1
+               password: lyyahww09081020
+            health:
+               repositorues:
+                  check:
+                     name: spring-cloud-config-repo
+                     label: dev
+                     profiles: config-label-v2.0
+eureka:
+   client:
+       serviceUrl:
+          defaultZone: http://garyhu:pass123@localhost:8761/eureka/,http://garyhu:pass123@localhost:8762/eureka/
