@@ -8,5 +8,7 @@ spring:
          server:
             git: # 配置git
                uri: https://github.com/garyhu1/spring-cloud-config-repo
-               username: garyhu1
-               password: lyyahww09081020
+               # 采用占位符来配置git URI
+               #uri: https://github.com/garyhu1/{application}
+               username:
+               password: 
